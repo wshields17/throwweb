@@ -3,11 +3,12 @@ import re
 from flask import render_template, request, redirect, url_for 
 from models import db, Throwers,meetdata,outdoormeetdata
 from tables1 import Throws
+from constant import dbloc
 
 app = Flask(__name__) 
 
 #app.config['SQLALCHEMY_TRACK_MODIFICATIONS']= False 
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:991550Pg@localhost/postgres' 
+app.config['SQLALCHEMY_DATABASE_URI'] = dbloc
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']= False  
 
 
